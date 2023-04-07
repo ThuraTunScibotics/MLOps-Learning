@@ -29,3 +29,35 @@ cd Desktop/mlops
 
 cookiecutter https://github.com/khuyentran1401/data-science-template
 ```
+
+**2.2** Libraries and tools used for project management from start to finish
+* **Poetry** is used for Dependency Management
+* **Hydra** is used to manage configuration file
+* **Pre-commit-plugins** is used to automate code review and formatting
+* **DVC** is used for data version control
+* **pdoc** is used to automatically create documentation for your project
+
+
+**2.2.1** - **Poetry**: An alternative to install libraries with `pip` is using `Poetry`. Poetry allows to:
+* Separate main dependencies and sub dependencies into two separate files (vs requirements.txt)
+* Create readable dependencies files
+* Remove all unused sub-dependencies when removing a library
+* Avoid installing new libraries in conflict with existing library
+* Package the project with few lines of code
+
+All the dependencies of the projcets are specified in **pyproject.toml**
+
+*Commands;*
+* *Generate projects* - `poetry new <project-name>`
+*  *Install dependencie* - `poetry install`
+*  *To add new PyPIP library* - `poetry add <library-name>`
+*  *To delete a library* - `poetry remove <library-name>`
+
+Practice in command lines
+```
+pip install poetry      # Install poetry in activated conda env
+
+cd Desktop/mlops
+poetry new ds_project
+
+```
